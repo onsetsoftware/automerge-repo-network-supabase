@@ -55,3 +55,6 @@ create policy "Anyone can edit and view documents."
     for all
     to authenticated, anon
     using (true);
+
+-- make sure that postgres can set local roles for RLS
+grant anon, authenticated to postgres;
