@@ -1,0 +1,44 @@
+{
+  "name": "@onsetsoftware/automerge-repo-network-supabase",
+  "private": false,
+  "repository": "https://github.com/onsetsoftware/automerge-repo-network-supabase",
+  "description": "A Supabase network adapter for automerge-repo.",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest --watch"
+  },
+  "devDependencies": {
+    "@types/dot-object": "^2.1.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-plugin-dts": "^1.4.0",
+    "vite-plugin-externalize-deps": "^0.4.0",
+    "vite-plugin-top-level-await": "^1.2.2",
+    "vite-plugin-wasm": "^3.1.1",
+    "vitest": "^0.18.1"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": "^2.5.0",
+    "automerge-repo": "^0.0.40"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/automerge-repo-network-supabase.umd.js",
+  "module": "./dist/automerge-repo-network-supabase.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/automerge-repo-network-supabase.es.js",
+      "require": "./dist/automerge-repo-network-supabase.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "dependencies": {
+    "cbor-x": "^1.5.1",
+    "eventemitter3": "^5.0.0"
+  }
+}
