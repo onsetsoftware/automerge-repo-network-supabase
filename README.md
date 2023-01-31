@@ -48,7 +48,7 @@ const repo = new Repo({
 
 import { serve } from "https://deno.land/std@0.175.0/http/server.ts"
 
-import { defaultCorsHeaders, handleRequest } from "https://deno.land/automerge_repo_network_supabase@0.1.0/mod.ts";
+import { defaultCorsHeaders, handleRequest } from "https://deno.land/x/automerge_repo_network_supabase@v0.1.0/mod.ts";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
